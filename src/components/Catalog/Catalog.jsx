@@ -1,4 +1,3 @@
-import { Filters } from 'components/Filters/Filters';
 import { CatalogList, LoadMoreBtn } from './Catalog.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { ItemCard } from 'components/ItemCard/ItemCard';
@@ -21,7 +20,6 @@ export const Catalog = () => {
 
   return (
     <>
-      <Filters />
       <CatalogList>
         {(advertFiltered.length > 0 ? advertFiltered : adverts).map(item => (
           <ItemCard key={item.id} advert={item} />

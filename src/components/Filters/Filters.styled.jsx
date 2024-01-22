@@ -52,7 +52,7 @@ export const StyledInput = styled(Field)`
   }
 
   &.make,
-  &.rentalPrice {
+  &.price {
     cursor: pointer;
     appearance: none;
     overflow: hidden;
