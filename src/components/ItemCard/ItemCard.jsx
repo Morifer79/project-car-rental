@@ -16,7 +16,7 @@ import {
 } from './ItemCard.styled';
 
 export const ItemCard = ({ advert }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isClick, setIsClick] = useState(null);
 
   const dispatch = useDispatch();
@@ -30,14 +30,16 @@ export const ItemCard = ({ advert }) => {
       : dispatch(addFavorite(advert));
   };
 
-  const handleOpenModal = advert => {
+  const openModal = advert => {
     setIsClick(advert);
-    setIsOpen(true);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
   };
 
-  const handleCloseModal = () => {
+  const closeModal = () => {
     setIsClick(null);
-    setIsOpen(false);
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto';
   };
 
   const {
@@ -58,47 +60,43 @@ export const ItemCard = ({ advert }) => {
   const functional = functionalities[0].split(' ')[0];
 
   return (
-    <>
-      <Card>
-        <Thumb>
-          <HeartBtn onClick={toggleFavorite}>
-            {isExist ? (
-              <HeartIcon fill="#3470FF" stroke="#3470FF">
-                <use xlinkHref={`${SpriteIcons}#icon-heart`} />
-              </HeartIcon>
-            ) : (
-              <HeartIcon fill="transparent" stroke="#fff">
-                <use xlinkHref={`${SpriteIcons}#icon-heart`} />
-              </HeartIcon>
-            )}
-          </HeartBtn>
-          <img src={img ? img : noImg} alt={make} width={274} height={268} />
-        </Thumb>
-        <TitleWrapper>
-          <p>
-            {make} <span>{model}</span>, {year}
-          </p>
-          <p>{rentalPrice}</p>
-        </TitleWrapper>
-        <TextWrapper>
-          <p>
-            {city} | {country} | {rentalCompany}
-          </p>
-          <p>
-            {type} | {model} | {id} | {functional}
-          </p>
-        </TextWrapper>
-        <LearnMoreBtn onClick={() => handleOpenModal(advert)}>
-          Learn more
-        </LearnMoreBtn>
-        {isOpen && (
-          <LearnMoreModal
-            isOpen={isOpen}
-            handleCloseModal={handleCloseModal}
-            advert={isClick}
-          />
-        )}
-      </Card>
-    </>
+    <Card>
+      <Thumb>
+        <HeartBtn onClick={toggleFavorite}>
+          {isExist ? (
+            <HeartIcon fill="#3470FF" stroke="#3470FF">
+              <use xlinkHref={`${SpriteIcons}#icon-heart`} />
+            </HeartIcon>
+          ) : (
+            <HeartIcon fill="transparent" stroke="#fff">
+              <use xlinkHref={`${SpriteIcons}#icon-heart`} />
+            </HeartIcon>
+          )}
+        </HeartBtn>
+        <img src={img ? img : noImg} alt={make} width={274} height={268} />
+      </Thumb>
+      <TitleWrapper>
+        <p>
+          {make} <span>{model}</span>, {year}
+        </p>
+        <p>{rentalPrice}</p>
+      </TitleWrapper>
+      <TextWrapper>
+        <p>
+          {city} | {country} | {rentalCompany}
+        </p>
+        <p>
+          {type} | {model} | {id} | {functional}
+        </p>
+      </TextWrapper>
+      <LearnMoreBtn onClick={() => openModal(advert)}>Learn more</LearnMoreBtn>
+      {isModalOpen && (
+        <LearnMoreModal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          advert={isClick}
+        />
+      )}
+    </Card>
   );
 };

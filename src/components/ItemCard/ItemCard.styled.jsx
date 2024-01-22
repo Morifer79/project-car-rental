@@ -79,6 +79,21 @@ export const HeartIcon = styled.svg`
   right: 14px;
   width: 18px;
   height: 18px;
+  &:hover {
+    stroke: ${theme.colors.blue};
+    @keyframes shadow {
+      0% {
+        scale: 1;
+      }
+      50% {
+        scale: 1.2;
+      }
+      100% {
+        scale: 1;
+      }
+    }
+    animation: shadow 0.5s ease infinite;
+  }
 `;
 
 export const TitleWrapper = styled.div`

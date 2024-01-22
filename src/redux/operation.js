@@ -1,24 +1,30 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://651fce42906e276284c3894f.mockapi.io/';
+axios.defaults.baseURL = 'https://651fce42906e276284c3894f.mockapi.io';
 
-async function fetchAll(page = 1, limit = 12) {
-  const { data } = await axios.get('/advert', {
-    params: {
-      page,
-      limit,
-    },
-  });
-  return data;
-}
+const params = new URLSearchParams({
+  page: 1,
+  limit: 12,
+});
 
 export const getAll = createAsyncThunk(
-  'advert',
+  'advert/fatchAll',async (_, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.get(`/advert?${params}`);
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const getMore = createAsyncThunk(
+  'advert/loadMore',
   async ({ page, limit }, { rejectWithValue }) => {
     try {
-      const advert = await fetchAll(page, limit);
-      return advert;
+      const { data } = await axios.get(`/advert?page=${page}&limit=${limit}`);
+      return data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -26,11 +32,15 @@ export const getAll = createAsyncThunk(
 );
 
 export const getFiltered = createAsyncThunk(
-  'filter',
+  'advert/getFilter',
   async (filters, { rejectWithValue }) => {
     try {
+      const completeFilters = {
+        make: filters.make,
+        rentalPrice: filters.price,
+      };
       const { data } = await axios.get(`/advert`, {
-        params: { make: filters.make },
+        params: completeFilters,
       });
       return data;
     } catch (error) {

@@ -1,11 +1,10 @@
 import { Formik } from "formik";
-import makeList from "./makeList.json";
 import { useDispatch } from 'react-redux';
-import { setFilters } from '../../redux/filterSlice';
-import { getFiltered } from '../../redux/operation';
+import { resetFilters, setFilters } from '../../redux/filterSlice';
+import { getAll, getFiltered } from '../../redux/operation';
+import makeList from './makeList.json';
 import {
   ButtonSearch,
-  ErrMsg,
   StyledForm,
   StyledInput,
   StyledLabel,
@@ -14,15 +13,19 @@ import {
 export const Filters = () => {
   const dispatch = useDispatch();
 
-  const handleSubmitFilter = ({ make }, { resetForm }) => {
-    dispatch(setFilters(make));
-    dispatch(getFiltered(make));
-    resetForm();
+  const handleSubmitFilter = (values, { resetForm }) => {
+    if (!values.make && !values.price) {
+      dispatch(resetFilters());
+      dispatch(getAll());
+      return;
+    }
+    dispatch(setFilters(values));
+    dispatch(getFiltered(values));
   };
 
   return (
     <Formik
-      initialValues={{ make: '', rentalPrice: '', miliage: 0 }}
+      initialValues={{ make: '', price: '' }}
       onSubmit={handleSubmitFilter}
     >
       <StyledForm>
@@ -32,7 +35,7 @@ export const Filters = () => {
             <option value="default" hidden>
               Select brand
             </option>
-            {makeList.map(make => (
+            {makeList.make.map(make => (
               <option key={make} value={make}>
                 {make}
               </option>
@@ -44,29 +47,26 @@ export const Filters = () => {
           Price/ 1 hour
           <StyledInput
             component="select"
-            name="rentalPrice"
-            className="rentalPrice"
+            name="price"
+            className="price"
           >
             <option value="default" hidden>
               To $
             </option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-            <option value="60">60</option>
-            <option value="70">70</option>
-            <option value="80">80</option>
+            {makeList.options.map(price => (
+              <option key={price} value={price}>
+                {price}
+              </option>
+            ))}
           </StyledInput>
         </StyledLabel>
 
         <StyledLabel>
           Сar mileage / km
           <StyledInput name="mileageFrom" placeholder="From" className="left" />
-          <ErrMsg name="mileageFrom" component="div" />
         </StyledLabel>
         <StyledLabel>
           <StyledInput name="mileageTo" placeholder="To" className="right" />
-          <ErrMsg name="mileageTo" component="div" />
         </StyledLabel>
 
         <ButtonSearch type="submit">Search</ButtonSearch>

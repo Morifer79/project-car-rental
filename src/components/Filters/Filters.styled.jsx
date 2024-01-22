@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Field, Form, ErrorMessage } from 'formik';
+import { Field, Form } from 'formik';
 import { theme } from 'components/theme';
 import arrow from 'images/chevron-down.svg';
 
@@ -72,10 +72,6 @@ export const StyledInput = styled(Field)`
   &:focus {
     caret-color: ${theme.colors.dark};
   }
-`;
-
-export const ErrMsg = styled(ErrorMessage)`
-  color: ${theme.colors.darkblue};
 `;
 
 export const ButtonSearch = styled.button`

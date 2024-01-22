@@ -28,28 +28,18 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     maxWidth: '542px',
     maxHight: '90vh',
-    backgroundColor: '#fff',
     padding: '40px',
+    zIndex: '1300',
     [mediaQuery]: '20px',
   },
   overlay: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
     backgroundColor: 'rgba(18, 20, 23, .5)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'none',
-    zIndex: '2',
   },
 };
 
 Modal.setAppElement('#root');
 
-export const LearnMoreModal = ({ isOpen, handleCloseModal, advert }) => {
+export const LearnMoreModal = ({ isOpen, onRequestClose, advert }) => {
   const {
     id,
     year,
@@ -79,16 +69,11 @@ export const LearnMoreModal = ({ isOpen, handleCloseModal, advert }) => {
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={() => {
-        document.body.style.overflow = 'auto';
-      }}
-      onAfterOpen={() => {
-        document.body.style.overflow = 'hidden';
-      }}
+      onRequestClose={onRequestClose}
       style={customStyles}
     >
       <ModalHeader>
-        <CloseBtn onClick={handleCloseModal}>
+        <CloseBtn onClick={onRequestClose}>
           <svg width="24" height="24">
             <use xlinkHref={`${SpriteIcons}#icon-x`} />
           </svg>

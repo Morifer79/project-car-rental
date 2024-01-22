@@ -1,37 +1,26 @@
 import { useSelector } from 'react-redux';
-import { getIsLoading, selectFavorite } from '../../redux/selectors';
+import { selectFavorite } from '../../redux/selectors';
 import { ItemCard } from 'components/ItemCard/ItemCard';
 import { Filters } from 'components/Filters/Filters';
-import { Loader } from 'components/Loader/Loader';
 import SpriteIcons from '../../images/sprite.svg';
-import {
-  ErMs,
-  FavoriteFrame,
-  FavoriteItem,
-  FavoriteList,
-  FavoriteWrapper,
-  Ups,
-} from './Favorite.styled';
+import { ErMs, FavoriteList, FavoriteWrapper, Ups } from './Favorite.styled';
+import { LearnMoreModal } from 'components/LearnMoreModal/LearnMoreModal';
 
-export const Favorite = () => {
+export const Favorite = ({ isModalOpen, openModal, closeModal, isClick }) => {
   const favorites = useSelector(selectFavorite);
-  const isLoader = useSelector(getIsLoading);
   return (
     <>
-      {isLoader && <Loader />}
       {favorites.length > 0 ? (
-        <FavoriteFrame>
+        <>
           <Filters />
           <FavoriteWrapper>
             <FavoriteList>
               {favorites.map(item => (
-                <FavoriteItem key={item.id}>
-                  <ItemCard advert={item} />
-                </FavoriteItem>
+                <ItemCard key={item.id} advert={item} />
               ))}
             </FavoriteList>
           </FavoriteWrapper>
-        </FavoriteFrame>
+        </>
       ) : (
         <ErMs>
           <Ups>NO FAVORITE YET</Ups>
@@ -39,6 +28,13 @@ export const Favorite = () => {
             <use xlinkHref={`${SpriteIcons}#icon-no_favorite`} />
           </svg>
         </ErMs>
+      )}
+      {isModalOpen && (
+        <LearnMoreModal
+          isOpen={isModalOpen}
+          handleCloseModal={closeModal}
+          advert={isClick}
+        />
       )}
     </>
   );

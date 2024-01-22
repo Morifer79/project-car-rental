@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getAll } from './operation';
+import { getAll, getMore } from './operation';
 
 const advertSlice = createSlice({
   name: 'advert',
@@ -7,37 +7,37 @@ const advertSlice = createSlice({
     advert: [],
     error: null,
     isLoading: false,
-    page: 1,
-    limit: 12,
-  },
-  reducers: {
-    loadMore: (state, { payload }) => {
-      state.page = payload.page;
-      state.limit = payload.limit;
-    },
+    isLoadMore: true,
   },
   extraReducers: builder => {
     builder
       .addCase(getAll.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
-
-        state.advert =
-          state.page === 1
-            ? payload.map(item => ({ ...item }))
-            : [...state.advert, ...payload.slice(0, state.limit)];
+        state.advert = payload;
       })
       .addCase(getAll.pending, state => {
         state.isLoading = true;
-        state.error = null;
       })
       .addCase(getAll.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload;
+      })
+      .addCase(getMore.fulfilled, (state, { payload }) => {
+        state.advert = [...state.advert, ...payload];
+        state.isLoadMore = payload.length > 0;
+        state.isLoading = false;
+        state.error = null;
+      })
+
+      .addCase(getMore.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(getMore.rejected, (state, { payload }) => {
+        state.error = payload;
+        state.isLoading = false;
       });
   },
 });
-
-export const { loadMore } = advertSlice.actions;
 
 export const advertReducer = advertSlice.reducer;

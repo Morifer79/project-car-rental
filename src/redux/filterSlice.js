@@ -6,10 +6,11 @@ const filterSlice = createSlice({
   initialState: {
     filters: {
       make: '',
+      price: '',
     },
     filteredAdvert: [],
-    isError: false,
     isLoading: false,
+    isError: false,
   },
   reducers: {
     setFilters: (state, { payload }) => {
@@ -18,11 +19,12 @@ const filterSlice = createSlice({
     resetFilters: state => {
       return {
         filters: {
-          brand: '',
+          make: '',
+          price: '',
         },
         filteredAdvert: [],
-        isError: false,
         isLoading: false,
+        isError: false,
       };
     },
   },
@@ -36,8 +38,8 @@ const filterSlice = createSlice({
         state.isError = true;
         state.isLoading = false;
       })
-      .addCase(getFiltered.fulfilled, (state, action) => {
-        state.filteredCars = action.payload;
+      .addCase(getFiltered.fulfilled, (state, { payload }) => {
+        state.filteredAdvert = payload;
         state.isLoading = false;
       });
   },
