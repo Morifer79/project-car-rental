@@ -18,8 +18,6 @@ export const FavoriteFrame = styled.div`
   align-items: center;
 `;
 
-export const FavoriteWrapper = styled.div``;
-
 export const FavoriteList = styled.ul`
   display: flex;
   justify-content: center;
@@ -27,5 +25,3 @@ export const FavoriteList = styled.ul`
   gap: 50px 28px;
   margin: 0 auto;
 `;
-
-export const FavoriteItem = styled.li``;

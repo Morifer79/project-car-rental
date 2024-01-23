@@ -4,7 +4,6 @@ import { setFilters } from '../../redux/filterSlice';
 import { getAll, getFiltered } from '../../redux/operation';
 import makeList from './makeList.json';
 import {
-  // ButtonReset,
   ButtonSearch,
   StyledForm,
   StyledInput,

@@ -1,18 +1,4 @@
-// import { theme } from "components/theme";
 import styled from "styled-components";
-
-// export const FlexBox = styled.div`
-//   margin-top: 10px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
-// export const Thumb = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
 
 export const Title = styled.h1`
   position: absolute;

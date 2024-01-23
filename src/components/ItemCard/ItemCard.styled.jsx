@@ -79,6 +79,7 @@ export const HeartIcon = styled.svg`
   right: 14px;
   width: 18px;
   height: 18px;
+
   &:hover {
     stroke: ${theme.colors.blue};
     @keyframes shadow {

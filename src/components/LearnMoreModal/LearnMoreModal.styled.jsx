@@ -7,6 +7,7 @@ export const ImageWrapper = styled.p`
   width: 460px;
   height: 248px;
   margin-bottom: ${theme.spacing(7)};
+
   &::before {
     position: absolute;
     top: 50%;
@@ -22,6 +23,7 @@ export const ImageWrapper = styled.p`
     transform: translate(-50%, -50%);
     opacity: 0;
   }
+
   &:hover::before {
     -webkit-animation: circle 0.75s;
     animation: circle 0.75s;
@@ -39,6 +41,7 @@ export const ImageWrapper = styled.p`
       opacity: 0;
     }
   }
+
   @keyframes circle {
     0% {
       opacity: 1;
@@ -97,6 +100,7 @@ export const AaFWrapper = styled.div`
   flex-direction: column;
   margin-bottom: ${theme.spacing(12)};
   gap: ${theme.spacing(2)};
+
   & > p {
     max-width: 460px;
     overflow: hidden;
@@ -106,16 +110,17 @@ export const AaFWrapper = styled.div`
 `;
 
 export const RentalConditions = styled.div`
-  /* display: flex; */
   color: ${theme.colors.black};
   font-size: 14px;
   font-weight: 500;
   line-height: 1.42;
   letter-spacing: -0.24px;
+
   & p {
     padding: 7px 14px;
     display: inline-block;
   }
+
   & span {
     color: ${theme.colors.blue};
     margin-right: ${theme.spacing(4)};
@@ -141,8 +146,6 @@ export const OrderBtn = styled.a`
 
 // ***************** Modal *************************
 
-export const ModalBody = styled.div``;
-
 export const ModalHeader = styled.div`
   height: auto;
   display: flex;
@@ -165,8 +168,9 @@ export const CloseBtn = styled.button`
 
   & svg {
     stroke: ${theme.colors.black};
-    transition: stroke ${theme.transition};
+    transition: stroke ${theme.transition}, scale ${theme.transition};
     scale: 0.98;
+
     &:hover,
     &:focus {
       scale: 1;

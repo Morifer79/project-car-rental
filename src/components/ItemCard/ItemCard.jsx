@@ -33,13 +33,11 @@ export const ItemCard = ({ advert }) => {
   const openModal = advert => {
     setIsClick(advert);
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsClick(null);
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
   };
 
   const {

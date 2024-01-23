@@ -184,7 +184,7 @@ export const Loading = styled.div`
   font-style: italic;
   left: 0;
   top: 50%;
-  margin-top: 20px;
+  margin-top: ${theme.spacing(10)};
   color: ${theme.colors.white};
   font-weight: bold;
   text-transform: uppercase;

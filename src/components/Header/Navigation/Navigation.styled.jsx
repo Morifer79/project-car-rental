@@ -30,6 +30,7 @@ export const StyledLink = styled(NavLink)`
     color: ${theme.colors.white};
     background-color: ${theme.colors.darkblue};
   }
+
   &.hintLink {
     @keyframes blink {
       0% {

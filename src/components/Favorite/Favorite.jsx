@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectFavorite } from '../../redux/selectors';
 import { ItemCard } from 'components/ItemCard/ItemCard';
 import { Filters } from 'components/Filters/Filters';
-import { FavoriteList, FavoriteWrapper } from './Favorite.styled';
+import { FavoriteList } from './Favorite.styled';
 import { LearnMoreModal } from 'components/LearnMoreModal/LearnMoreModal';
 
 export const Favorite = ({ isModalOpen, openModal, closeModal, isClick }) => {
@@ -10,7 +10,6 @@ export const Favorite = ({ isModalOpen, openModal, closeModal, isClick }) => {
   return (
     <>
       <Filters />
-      <FavoriteWrapper>
         <FavoriteList>
           {favorites.map(item => (
             <li key={item.id}>
@@ -18,7 +17,6 @@ export const Favorite = ({ isModalOpen, openModal, closeModal, isClick }) => {
             </li>
           ))}
         </FavoriteList>
-      </FavoriteWrapper>
       {isModalOpen && (
         <LearnMoreModal
           isOpen={isModalOpen}

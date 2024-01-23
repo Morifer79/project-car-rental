@@ -9,9 +9,6 @@ export const StyledForm = styled(Form)`
   display: flex;
   justify-content: center;
   align-items: end;
-  &:first-child {
-    /* width: 220px; */
-  }
 `;
 
 export const StyledLabel = styled.label`
@@ -47,7 +44,7 @@ export const StyledInput = styled(Field)`
   &.make {
     width: 224px;
   }
-  &.rentalPrice {
+  &.price {
     width: 125px;
   }
 
@@ -79,32 +76,7 @@ export const ButtonSearch = styled.button`
   font-size: 14px;
   font-weight: 600;
   line-height: 1.42;
-  /* color: ${theme.colors.white}; */
-  /* background: ${theme.colors.blue}; */
   border-radius: 12px;
   border: transparent;
   transition: background-color ${theme.transition};
-
-  &:is(:hover, :focus) {
-    background-color: ${theme.colors.darkblue};
-    /* style={{ backgroundColor: isReset ? 'red' : 'blue', color: 'white' }} */
-  }
 `;
-
-// export const ButtonReset = styled.button`
-//   margin-left: ${theme.spacing(9)};
-//   padding: 14px 44px;
-//   font-size: 14px;
-//   font-weight: 600;
-//   line-height: 1.42;
-//   color: ${theme.colors.blue};
-//   background: transparent;
-//   border-radius: 12px;
-//   border: 1px solid ${theme.colors.blue};
-//   transition: color ${theme.transition}, border-color ${theme.transition};
-
-//   &:is(:hover, :focus) {
-//     color: #fa8072;
-//     border-color: #fa8072;
-//   }
-// `;

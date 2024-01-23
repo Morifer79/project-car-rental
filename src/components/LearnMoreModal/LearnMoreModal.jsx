@@ -9,7 +9,6 @@ import {
   OrderBtn,
   RentalConditions,
   TitleAaF,
-  ModalBody,
   ImageWrapper,
   ModalTitleWrapper,
   AaFWrapper,
@@ -79,7 +78,7 @@ export const LearnMoreModal = ({ isOpen, onRequestClose, advert }) => {
           </svg>
         </CloseBtn>
       </ModalHeader>
-      <ModalBody>
+      <div>
         <ImageWrapper>
           <img src={img ? img : noImg} alt={make} />
         </ImageWrapper>
@@ -116,7 +115,7 @@ export const LearnMoreModal = ({ isOpen, onRequestClose, advert }) => {
           </p>
         </RentalConditions>
         <OrderBtn href="tel:+380730000000">Rental car</OrderBtn>
-      </ModalBody>
+      </div>
     </Modal>
   );
 };

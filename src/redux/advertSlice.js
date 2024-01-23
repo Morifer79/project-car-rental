@@ -29,7 +29,6 @@ const advertSlice = createSlice({
         state.isLoading = false;
         state.error = null;
       })
-
       .addCase(getMore.pending, state => {
         state.isLoading = true;
       })
