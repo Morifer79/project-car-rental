@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/project-car-rental/static/js/main.d95bae1d.js",
+    "main.js": "/project-car-rental/static/js/main.f4e84142.js",
     "static/js/158.fcf9693e.chunk.js": "/project-car-rental/static/js/158.fcf9693e.chunk.js",
     "static/js/786.b8101854.chunk.js": "/project-car-rental/static/js/786.b8101854.chunk.js",
-    "static/js/500.1144f623.chunk.js": "/project-car-rental/static/js/500.1144f623.chunk.js",
+    "static/js/500.7c73203b.chunk.js": "/project-car-rental/static/js/500.7c73203b.chunk.js",
     "static/js/503.6102dff8.chunk.js": "/project-car-rental/static/js/503.6102dff8.chunk.js",
-    "static/js/463.7e1d9389.chunk.js": "/project-car-rental/static/js/463.7e1d9389.chunk.js",
+    "static/js/463.9662a28d.chunk.js": "/project-car-rental/static/js/463.9662a28d.chunk.js",
     "static/media/no-image.png": "/project-car-rental/static/media/no-image.92ec54143a1808558646.png",
     "static/media/sprite.svg": "/project-car-rental/static/media/sprite.21709cfc22adb0eaf6e537e82e473da6.svg",
     "index.html": "/project-car-rental/index.html",
     "static/media/chevron-down.svg": "/project-car-rental/static/media/chevron-down.24cd320d509ea2ebbeb4265f8030bafb.svg",
-    "main.d95bae1d.js.map": "/project-car-rental/static/js/main.d95bae1d.js.map",
+    "main.f4e84142.js.map": "/project-car-rental/static/js/main.f4e84142.js.map",
     "158.fcf9693e.chunk.js.map": "/project-car-rental/static/js/158.fcf9693e.chunk.js.map",
     "786.b8101854.chunk.js.map": "/project-car-rental/static/js/786.b8101854.chunk.js.map",
-    "500.1144f623.chunk.js.map": "/project-car-rental/static/js/500.1144f623.chunk.js.map",
+    "500.7c73203b.chunk.js.map": "/project-car-rental/static/js/500.7c73203b.chunk.js.map",
     "503.6102dff8.chunk.js.map": "/project-car-rental/static/js/503.6102dff8.chunk.js.map",
-    "463.7e1d9389.chunk.js.map": "/project-car-rental/static/js/463.7e1d9389.chunk.js.map"
+    "463.9662a28d.chunk.js.map": "/project-car-rental/static/js/463.9662a28d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d95bae1d.js"
+    "static/js/main.f4e84142.js"
   ]
 }
