@@ -13,7 +13,9 @@ export const Favorite = ({ isModalOpen, openModal, closeModal, isClick }) => {
       <FavoriteWrapper>
         <FavoriteList>
           {favorites.map(item => (
-            <ItemCard key={item.id} advert={item} openModal={openModal} />
+            <li key={item.id}>
+              <ItemCard advert={item} openModal={openModal} />
+            </li>
           ))}
         </FavoriteList>
       </FavoriteWrapper>

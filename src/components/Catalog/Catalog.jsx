@@ -22,11 +22,15 @@ export const Catalog = () => {
     <>
       <CatalogList>
         {(advertFiltered.length > 0 ? advertFiltered : adverts).map(item => (
-          <ItemCard key={item.id} advert={item} />
+          <li key={item.id}>
+            <ItemCard advert={item} />
+          </li>
         ))}
       </CatalogList>
       {isLoadMore && (
-        <LoadMoreBtn onClick={handleLoadMore}><span>Load more</span></LoadMoreBtn>
+        <LoadMoreBtn onClick={handleLoadMore}>
+          <span>Load more</span>
+        </LoadMoreBtn>
       )}
     </>
   );

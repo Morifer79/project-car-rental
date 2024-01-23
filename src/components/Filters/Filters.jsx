@@ -1,26 +1,37 @@
-import { Formik } from "formik";
+import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { resetFilters, setFilters } from '../../redux/filterSlice';
+import { setFilters } from '../../redux/filterSlice';
 import { getAll, getFiltered } from '../../redux/operation';
 import makeList from './makeList.json';
 import {
+  // ButtonReset,
   ButtonSearch,
   StyledForm,
   StyledInput,
   StyledLabel,
-} from "./Filters.styled";
+} from './Filters.styled';
+import { useState } from 'react';
 
 export const Filters = () => {
+  const [buttonState, setButtonState] = useState({
+    isReset: false,
+  });
   const dispatch = useDispatch();
 
   const handleSubmitFilter = (values, { resetForm }) => {
-    if (!values.make && !values.price) {
-      dispatch(resetFilters());
+    setButtonState({ isReset: true });
+    if (resetForm()) {
+      resetForm();
       dispatch(getAll());
       return;
     }
     dispatch(setFilters(values));
     dispatch(getFiltered(values));
+  };
+
+  const handleSelectClick = () => {
+    // Если кликнули по полю select, возвращаем кнопку в исходное состояние
+    setButtonState({ isReset: false });
   };
 
   return (
@@ -31,7 +42,12 @@ export const Filters = () => {
       <StyledForm>
         <StyledLabel>
           Car brand
-          <StyledInput component="select" name="make" className="make">
+          <StyledInput
+            component="select"
+            name="make"
+            className="make"
+            onClick={handleSelectClick}
+          >
             <option value="default" hidden>
               Select brand
             </option>
@@ -49,6 +65,7 @@ export const Filters = () => {
             component="select"
             name="price"
             className="price"
+            onClick={handleSelectClick}
           >
             <option value="default" hidden>
               To $
@@ -69,7 +86,18 @@ export const Filters = () => {
           <StyledInput name="mileageTo" placeholder="To" className="right" />
         </StyledLabel>
 
-        <ButtonSearch type="submit">Search</ButtonSearch>
+        <ButtonSearch
+          type="submit"
+          style={{
+            backgroundColor: buttonState.isReset ? 'red' : 'blue',
+            color: 'white',
+            ':hover': {
+              backgroundColor: buttonState.isReset ? 'yellow' : 'orange',
+            },
+          }}
+        >
+          {buttonState.isReset ? 'Reset' : 'Search'}
+        </ButtonSearch>
       </StyledForm>
     </Formik>
   );

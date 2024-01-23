@@ -1,7 +1,7 @@
 import { theme } from "components/theme";
 import styled from "styled-components";
 
-export const ErMs = styled.p`
+export const ErMs = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
