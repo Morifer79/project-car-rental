@@ -30,4 +30,15 @@ export const StyledLink = styled(NavLink)`
     color: ${theme.colors.white};
     background-color: ${theme.colors.darkblue};
   }
+  &.hintLink {
+    @keyframes blink {
+      0% {
+        box-shadow: 0 0 0 0 rgba(55, 141, 250, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 0 12px rgba(55, 141, 250, 0);
+      }
+    }
+    animation: blink 1s ease infinite;
+  }
 `;
