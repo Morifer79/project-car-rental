@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/project-car-rental/static/js/main.f4e84142.js",
+    "main.js": "/project-car-rental/static/js/main.4b6c505e.js",
     "static/js/158.fcf9693e.chunk.js": "/project-car-rental/static/js/158.fcf9693e.chunk.js",
     "static/js/786.b8101854.chunk.js": "/project-car-rental/static/js/786.b8101854.chunk.js",
     "static/js/500.7c73203b.chunk.js": "/project-car-rental/static/js/500.7c73203b.chunk.js",
     "static/js/503.6102dff8.chunk.js": "/project-car-rental/static/js/503.6102dff8.chunk.js",
-    "static/js/463.9662a28d.chunk.js": "/project-car-rental/static/js/463.9662a28d.chunk.js",
+    "static/js/463.d996a9a1.chunk.js": "/project-car-rental/static/js/463.d996a9a1.chunk.js",
     "static/media/no-image.png": "/project-car-rental/static/media/no-image.92ec54143a1808558646.png",
     "static/media/sprite.svg": "/project-car-rental/static/media/sprite.21709cfc22adb0eaf6e537e82e473da6.svg",
     "index.html": "/project-car-rental/index.html",
     "static/media/chevron-down.svg": "/project-car-rental/static/media/chevron-down.24cd320d509ea2ebbeb4265f8030bafb.svg",
-    "main.f4e84142.js.map": "/project-car-rental/static/js/main.f4e84142.js.map",
+    "main.4b6c505e.js.map": "/project-car-rental/static/js/main.4b6c505e.js.map",
     "158.fcf9693e.chunk.js.map": "/project-car-rental/static/js/158.fcf9693e.chunk.js.map",
     "786.b8101854.chunk.js.map": "/project-car-rental/static/js/786.b8101854.chunk.js.map",
     "500.7c73203b.chunk.js.map": "/project-car-rental/static/js/500.7c73203b.chunk.js.map",
     "503.6102dff8.chunk.js.map": "/project-car-rental/static/js/503.6102dff8.chunk.js.map",
-    "463.9662a28d.chunk.js.map": "/project-car-rental/static/js/463.9662a28d.chunk.js.map"
+    "463.d996a9a1.chunk.js.map": "/project-car-rental/static/js/463.d996a9a1.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f4e84142.js"
+    "static/js/main.4b6c505e.js"
   ]
 }
