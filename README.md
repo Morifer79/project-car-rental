@@ -12,7 +12,7 @@ Users can view a list of available cars, filter them, and mark their favorites.
 [Web Car Rental](#web-car-rental)  
 [Features](#features)  
 [Technologies](#technologies)  
-[Installation](installation)  
+[Installation](#installation)  
 
 ## Features :  
 
@@ -21,7 +21,7 @@ Users can view a list of available cars, filter them, and mark their favorites.
 - Mark cars as favorites  
 - Pagination for browsing through the car list 
 
-## Twchnologies :  
+## Technologies :  
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/></a>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
@@ -38,7 +38,7 @@ Users can view a list of available cars, filter them, and mark their favorites.
 ※ [Axios](https://axios-http.com): HTTP client for database operation.  
 ※ [MockAPI](https://mockapi.io): Mock API for simulating backend data.  
 
-## Installation :
+## Installation :  
 
 To get started with this project, follow the installation instructions below.
 
@@ -58,7 +58,7 @@ To get started with this project, follow the installation instructions below.
 4. Open to view it in the browser:  
 <a href="https://morifer79.github.io/project-car-rental/"><img src="https://badgen.net/badge/🌎 www:/Car Rental/yellow?icon=email" alt="Mail Badge"/></a>
 
-## 𝔼𝕞𝕒𝕚𝕝 𝕞𝕖 ᎓  
+## Email me :
 Questions, suggestions, help:  
 <a href="mailto:cyber-morifer@proton.me"><img src="https://badgen.net/badge/📧 email:/cyber-morifer@proton.me/yellow?icon=email" alt="Mail Badge"/></a>
    
