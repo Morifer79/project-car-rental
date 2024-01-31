@@ -1,4 +1,4 @@
-# 𝕎𝕖𝕓 ℂ𝕒𝕣 ℝ𝕖𝕟𝕥𝕒𝕝
+## Web Car Rental  
 
 ![Car Rental Home](./src/images/car-rental-home.jpg)  
 ![Car Rental Catalog](./src/images/car-rental-catalog.jpg)  
@@ -7,21 +7,21 @@ This project was created using [Create React App](https://github.com/facebook/cr
 Web application for browsing and managing car rentals.  
 Users can view a list of available cars, filter them, and mark their favorites.
 
-## 𝕋𝕒𝕓𝕝𝕖 𝕠𝕗 ℂ𝕠𝕟𝕥𝕖𝕟𝕥𝕤 ᎓  
+## Table of Contents ᎓  
 
-※ [Web Car Rental](#web-car-rental)  
-※ [Features](#features)  
-※ [Technologies](#technologies)  
-※ [Installation](#installation)  
+[Web Car Rental](#web-car-rental)  
+[Features](#features)  
+[Technologies](#technologies)  
+[Installation](#installation)  
 
-## 𝔽𝕖𝕒𝕥𝕦𝕣𝕖𝕤 ᎓  
+## Features : 
 
 ※ View a list of available cars  
 ※ Filter cars based on various criteria (e.g., brand, price)  
 ※ Mark cars as favorites  
 ※ Pagination for browsing through the car list 
 
-## 𝕋𝕖𝕔𝕙𝕟𝕠𝕝𝕠𝕘𝕚𝕖𝕤 ᎓  
+## Technologies :
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/></a>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
@@ -38,7 +38,7 @@ Users can view a list of available cars, filter them, and mark their favorites.
 ※ [Axios](https://axios-http.com): HTTP client for database operation.  
 ※ [MockAPI](https://mockapi.io): Mock API for simulating backend data.  
 
-## 𝕀𝕟𝕤𝕥𝕒𝕝𝕝𝕒𝕥𝕚𝕠𝕟 ᎓  
+## Installation :
 
 To get started with this project, follow the installation instructions below.
 
