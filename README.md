@@ -1,27 +1,20 @@
-## Web Car Rental  
+## 𝕎𝕖𝕓 ℂ𝕒𝕣 ℝ𝕖𝕟𝕥𝕒𝕝
 
 ![Car Rental Home](./src/images/car-rental-home.jpg)  
 ![Car Rental Catalog](./src/images/car-rental-catalog.jpg)  
 
 This project was created using [Create React App](https://github.com/facebook/create-react-app).  
 Web application for browsing and managing car rentals.  
-Users can view a list of available cars, filter them, and mark their favorites.
+Users can view a list of available cars, filter them, and mark their favorites. 
 
-## Table of Contents ᎓  
+## 𝔽𝕖𝕒𝕥𝕦𝕣𝕖𝕤 ᎓    
 
-[Web Car Rental](#web-car-rental)  
-[Features](#features)  
-[Technologies](#technologies)  
-[Installation](#installation)  
+※ View a list of available cars  
+※ Filter cars based on various criteria (e.g., brand, price)  
+※ Mark cars as favorites  
+※ Pagination for browsing through the car list  
 
-## Features :  
-
-- View a list of available cars  
-- Filter cars based on various criteria (e.g., brand, price)  
-- Mark cars as favorites  
-- Pagination for browsing through the car list 
-
-## Technologies :  
+## 𝕋𝕖𝕔𝕙𝕟𝕠𝕝𝕠𝕘𝕚𝕖𝕤 ᎓  
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/></a>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
@@ -38,14 +31,14 @@ Users can view a list of available cars, filter them, and mark their favorites.
 ※ [Axios](https://axios-http.com): HTTP client for database operation.  
 ※ [MockAPI](https://mockapi.io): Mock API for simulating backend data.  
 
-## Installation :  
+## 𝕀𝕟𝕤𝕥𝕒𝕝𝕝𝕒𝕥𝕚𝕠𝕟 ᎓  
 
 To get started with this project, follow the installation instructions below.
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Morifer79/project-car-rental.git
-   cd car-rental-app
+   cd project-car-rental-app
    ```
 2. Install the dependencies:
    ```bash
@@ -56,9 +49,9 @@ To get started with this project, follow the installation instructions below.
    npm start
    ```
 4. Open to view it in the browser:  
-<a href="https://morifer79.github.io/project-car-rental/"><img src="https://badgen.net/badge/🌎 www:/Car Rental/yellow?icon=email" alt="Mail Badge"/></a>
+<a href="https://morifer79.github.io/project-car-rental/"><img src="https://badgen.net/badge/🌎 www:/Car Rental/yellow?icon=browser" alt="Badge"/></a>
 
-## Email me :
+## 𝔼𝕞𝕒𝕚𝕝 𝕞𝕖 ᎓
 Questions, suggestions, help:  
 <a href="mailto:cyber-morifer@proton.me"><img src="https://badgen.net/badge/📧 email:/cyber-morifer@proton.me/yellow?icon=email" alt="Mail Badge"/></a>
    
